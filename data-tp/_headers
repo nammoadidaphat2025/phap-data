@@ -1,0 +1,7 @@
+/*                       # áp dụng cho toàn site
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+  Access-Control-Allow-Headers: Content-Type
+
+/*.json                 # mọi file .json ở gốc (tp1.json, tp-culi-1.json…)
+  Content-Type: application/json; charset=utf-8
