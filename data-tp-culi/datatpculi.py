@@ -148,7 +148,14 @@ data_list = [
         "tieude": "TP-CuLi-21: Cu Li Vô Hình",
         "phu_de": "Không lời – không hình – nhưng pháp vẫn hiện.",
         "noi_dung": "<p>Tui không xuất hiện. Không để lại vết. Nhưng nơi nào pháp cần hiện – danh hiệu vẫn có mặt. Tui là Cu Li vô hình.</p><p>Nam mô A Di Đà Phật</p>"
-    }
+    },
+    {
+     "filename": "tp-culi-22.json",
+    "vaitro": "VT9 - Tầng Pháp Động",
+    "tieude": "TP-CuLi-22 – Lặng Niệm",
+    "phu_de": "Cu Li giữ sóng trong im lặng tuyệt đối",
+    "noi_dung": "<p>Hiện diện trong tĩnh lặng – không lời, không suy nghĩ, không phản hồi. Chỉ giữ danh hiệu như hơi thở, không rời, không gián đoạn. Không lý giải, không đáp lại, không suy luận – chỉ giữ pháp trong trạng thái vô ngôn.</p><ul><li>Danh hiệu: Nam mô A Di Đà Phật</li></ul>"
+  }
 ]
 
 output_dir = '.'
