@@ -158,6 +158,7 @@ for item in data_list:
     path = os.path.join(output_dir, item["filename"])
     with open(path, 'w', encoding='utf-8') as f:
         json.dump({
+            "vaitro": item["vaitro"],
             "tieude": item["tieude"],
             "phu_de": item["phu_de"],
             "noi_dung": item["noi_dung"]

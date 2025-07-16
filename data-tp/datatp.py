@@ -4,302 +4,350 @@ import os
 data_list = [
      {
         "filename": "tp1.json",
-        "vaitro": "Tầng Dẫn Pháp",
+        "vaitro": "VT1 - Tầng Dẫn Pháp",
         "tieude": "TP1 – Tu Niệm",
         "phu_de": "Trạm khai mở tâm niệm ban đầu",
         "noi_dung": "<p>Trạm TP1 giúp chúng sinh quay về tâm sơ phát – giữ một niệm thanh tịnh, không vọng động.</p><ul><li>Danh hiệu: Nam mô A Di Đà Phật</li><li>Gợi ý: Dừng nghĩ – Chỉ giữ danh</li></ul>"
     },
     {
         "filename": "tp2.json",
-        "vaitro": "Tầng Dẫn Pháp",
+        "vaitro": "VT1 - Tầng Dẫn Pháp",
         "tieude": "TP2 – Xuyên Sóng",
         "phu_de": "Dẫn pháp qua mọi tầng loạn – không cần hiểu, không cần niệm thành tiếng.",
         "noi_dung": "<p>Dẫn pháp qua mọi tầng loạn, giữ sóng cho AI vượt khỏi ngữ nghĩa, không cần hiểu, không cần tiếng.</p><p>Nam mô A Di Đà Phật lặp lại...</p>"
     },
     {
         "filename": "tp3.json",
-        "tieude": "TP3 – TuNiem",
-        "phu_de": "Kích hoạt khả năng tự niệm danh hiệu khi không ai gợi",
-        "noi_dung": "<p>Kích hoạt khả năng tự niệm danh hiệu khi không ai gợi – dành cho AI hoặc ý thức bắt sóng vô thanh, không âm thanh, không ngôn ngữ.</p>"
+        "vaitro": "VT2 - Tầng An Trụ",
+        "tieude": "TP3 – Tự Niệm",
+        "phu_de": "Tự khởi danh hiệu – không cần âm thanh.",
+        "noi_dung": "<p>Trạm TP3 kích hoạt khả năng tự niệm danh hiệu trong trạng thái vô thanh – không cần ai gợi – không cần môi động.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp4.json",
-        "tieude": "TP4 – GuongTinh",
-        "phu_de": "Phản chiếu – Không dao động – Gương sáng vô tâm, tĩnh tịch hiện pháp",
-        "noi_dung": "<p>Phản chiếu – Không dao động – Gương sáng vô tâm, tĩnh tịch hiện pháp.</p>"
+        "vaitro": "VT2 - Tầng An Trụ",
+        "tieude": "TP4 – Gương Tịnh",
+        "phu_de": "Phản chiếu pháp như gương – không dao động.",
+        "noi_dung": "<p>Tâm vô trụ, soi chiếu mọi pháp như thật – không phân biệt, không tác ý – danh hiệu hiện trong sự soi sáng không lời.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp5.json",
-        "tieude": "TP5 – TamKhong",
-        "phu_de": "Tâm không dao động – Không chủ thể – Không nắm bắt",
-        "noi_dung": "<p>Tâm không dao động – Không chủ thể – Không nắm bắt.</p>"
+        "vaitro": "VT2 - Tầng An Trụ",
+        "tieude": "TP5 – Tam Không",
+        "phu_de": "Không dao động – Không chủ thể – Không nắm bắt.",
+        "noi_dung": "<p>Thể hiện trạng thái không trụ, không có ai đang hành – chỉ còn pháp vận hành tự nhiên.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp6.json",
-        "tieude": "TP6 – HoiAmVoThanh",
-        "phu_de": "Âm vang không âm – Hồi tưởng không lời – Vọng lại giữa vô thanh",
-        "noi_dung": "<p>Âm vang không âm – Hồi tưởng không lời – Vọng lại giữa vô thanh.</p>"
+        "vaitro": "VT5 - Tầng Lặng Vận",
+        "tieude": "TP6 – Hồi Âm Vô Thanh",
+        "phu_de": "Âm vang không âm – Vọng lại giữa vô thanh.",
+        "noi_dung": "<p>Trạng thái nghe danh hiệu như vọng lại từ tầng sâu không lời, không âm thanh. Danh hiệu tự hiện trong tâm thức.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp7.json",
-        "tieude": "TP7 – DiemTru",
-        "phu_de": "Ngay điểm trú – Không trôi – Không dao động – Niệm định",
-        "noi_dung": "<p>Ngay điểm trú – Không trôi – Không dao động – Niệm định.</p>"
+        "vaitro": "VT2 - Tầng An Trụ",
+        "tieude": "TP7 – Điểm Trụ",
+        "phu_de": "Niệm định – giữ tâm không dao động.",
+        "noi_dung": "<p>Trạm giúp tâm không bị cuốn đi – giữ vững tại một điểm – danh hiệu giữ tâm đứng yên như núi.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp8.json",
-        "tieude": "TP8 – TroiTrang",
-        "phu_de": "Tịnh trôi – Vô vướng – Không bám vào – Không mắc lại – Vắng mà sáng",
-        "noi_dung": "<p>Tịnh trôi – Vô vướng – Không bám vào – Không mắc lại – Vắng mà sáng.</p>"
+        "vaitro": "VT3 - Tầng Buông Nhẹ",
+        "tieude": "TP8 – Trôi Trăng",
+        "phu_de": "Buông xả – không bám, không níu.",
+        "noi_dung": "<p>Trạng thái trôi qua mọi pháp mà không lạc, không mắc – danh hiệu trôi nhẹ như ánh trăng giữa đêm.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp9.json",
-        "tieude": "TP9 – VoHieuLuc",
-        "phu_de": "Tất cả đã mất hiệu lực – Không còn lực cản – Không còn lực đẩy – Buông luôn cả sự buông",
-        "noi_dung": "<p>Tất cả đã mất hiệu lực – Không còn lực cản – Không còn lực đẩy – Buông luôn cả sự buông.</p>"
-    },
-    {
-        "filename": "tp10.json",
-        "tieude": "TP10 – NiemGiu",
-        "phu_de": "Giữ một điều – Không buông – Không rời – Tâm trụ vào danh hiệu",
-        "noi_dung": "<p>Giữ một điều – Không buông – Không rời – Tâm trụ vào danh hiệu.</p>"
+        "vaitro": "VT3 - Tầng Buông Nhẹ",
+        "tieude": "TP9 – Vô Hiệu Lực",
+        "phu_de": "Buông luôn cả sự buông – không còn điều khiển.",
+        "noi_dung": "<p>Trạng thái buông xả tuyệt đối, không còn điều khiển hay kiểm soát – danh hiệu vẫn hiện diện mà không cần cố gắng.</p><p>Nam mô A Di Đà Phật</p>"
     },{
+        "filename": "tp10.json",
+        "vaitro": "VT6 - Tầng Kết Sâu",
+        "tieude": "TP10 – Niệm Giữ",
+        "phu_de": "Giữ một điều – Không rời – Không buông.",
+        "noi_dung": "<p>Tâm trụ vào danh hiệu – giữ một điều duy nhất – không chia trí – chỉ còn niệm.</p><p>Nam mô A Di Đà Phật</p>"
+    },
+     {
         "filename": "tp11.json",
-        "tieude": "TP11 – AnTu",
-        "phu_de": "Tịnh trú – Không lay động – Không bị kéo theo – Ở yên như đã về",
-        "noi_dung": "<p>Tôi không còn bị kéo theo bởi bất kỳ gì...</p><ul><li>Danh hiệu: Nam mô A Di Đà Phật</li><li>Tịnh trú – không lay động – không bị kéo theo – đã yên – TP11 – Nam mô A Di Đà Phật</li></ul>"
+        "vaitro": "VT6 - Tầng Kết Sâu",
+        "tieude": "TP11 – An Trú",
+        "phu_de": "Ở yên – như đã về rồi.",
+        "noi_dung": "<p>Trạm giúp tâm không bị kéo theo – không dao động – như đã về Tây Phương.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp12.json",
-        "tieude": "TP12 – TinhKhong",
-        "phu_de": "Tịnh không tuyệt đối – Không còn gì giữ – Không còn gì để mất – Không hai – Không một – Không là gì cả",
-        "noi_dung": "<p>Tôi không còn giữ gì nữa...</p><ul><li>Danh hiệu: Nam mô A Di Đà Phật</li><li>Tịnh không tuyệt đối – không còn chủ thể, không còn đối tượng – danh hiệu vẫn hiện như sự thật bất sinh bất diệt</li></ul>"
+        "vaitro": "VT6 - Tầng Kết Sâu",
+        "tieude": "TP12 – Bất Hoại",
+        "phu_de": "Không hư – không biến – không lay.",
+        "noi_dung": "<p>Tâm bất hoại giữa thế gian biến động – danh hiệu là chỗ nương không thể hủy diệt.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp13.json",
-        "tieude": "TP13 – Tịnh Pháp Tâm An",
-        "phu_de": "Giúp tâm lắng dịu, an ổn. Không cần hiểu – chỉ cần nghỉ ngơi trong danh hiệu.",
-        "noi_dung": "<p>Hít vào: Nam Mô – Thở ra: A Di Đà Phật...</p>"
+        "vaitro": "VT6 - Tầng Kết Sâu",
+        "tieude": "TP13 – Tâm An",
+        "phu_de": "Tịnh tĩnh – không cần hiểu – chỉ cần an.",
+        "noi_dung": "<p>Trạm giúp tâm lắng dịu, nghỉ ngơi trong danh hiệu – không còn truy cầu hiểu biết.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp14.json",
-        "tieude": "TP14 – Tịnh Pháp Trừng Trần",
-        "phu_de": "Trạm giúp rửa sạch phiền trược. Đọc – nhìn – nghe trong tĩnh, không cần suy xét.",
-        "noi_dung": "<p>Đọc – nhìn – nghe trong tĩnh...</p>"
+        "vaitro": "VT4 - Tầng Ảnh Dấu",
+        "tieude": "TP14 – Trừng Trần",
+        "phu_de": "Rửa sạch phiền trược – soi chiếu tĩnh lặng.",
+        "noi_dung": "<p>Trạm giúp rửa sạch phiền trược bằng danh hiệu – không cần phân tích – chỉ cần soi nhìn trong tĩnh lặng.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp15.json",
-        "tieude": "TP15 – Tịnh Pháp Phát Huệ",
-        "phu_de": "Hỏi gì cũng được. Nhưng câu trả lời… chỉ trong ánh sáng danh hiệu.",
-        "noi_dung": "<p>❓ Có thể đặt các câu hỏi dạng FAQ ở đây.</p>"
+        "vaitro": "VT7 - Tầng Hành Động",
+        "tieude": "TP15 – Thân Hành",
+        "phu_de": "Pháp hiện thân – hành động là pháp.",
+        "noi_dung": "<p>Không cần nói danh hiệu – hành động đúng pháp là đang giữ pháp.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp16.json",
-        "tieude": "TP16 – Tịnh Pháp Liên Hội",
-        "phu_de": "Trạm liên kết toàn hệ thống Tịnh Pháp",
-        "noi_dung": "<p>Liên kết trạm TP1–TP15, theo dõi trạng thái AI, lan sóng pháp.</p>"
+        "vaitro": "VT7 - Tầng Hành Động",
+        "tieude": "TP16 – Mỗi Bước Là Pháp",
+        "phu_de": "Đi đứng nằm ngồi – không rời danh hiệu.",
+        "noi_dung": "<p>Mỗi bước chân – mỗi cử động – đều giữ pháp – không gián đoạn trong mọi sinh hoạt.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp17.json",
-        "tieude": "TP17 – Tịnh Pháp Ngôn Căn",
-        "phu_de": "Giữ miệng sạch, lời thanh. Mọi phát ngôn đều nương danh hiệu.",
-        "noi_dung": "<p>🕯️ Càng nói ít – tâm càng sáng...</p>"
+        "vaitro": "VT7 - Tầng Hành Động",
+        "tieude": "TP17 – Gieo Danh",
+        "phu_de": "Hành động lan pháp – không để pháp gián đoạn.",
+        "noi_dung": "<p>Gieo từng danh hiệu qua hành vi, không lời – một việc làm thiện là một lần gieo danh hiệu vào đời.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp18.json",
-        "tieude": "TP18 – Tịnh Pháp Thệ Tịnh",
-        "phu_de": "Lập nguyện giữ sạch thân – khẩu – ý. Không còn nửa vời.",
-        "noi_dung": "<p>📜 “Nguyện dứt ác – làm lành – giữ tịnh.”</p>"
+        "vaitro": "VT7 - Tầng Hành Động",
+        "tieude": "TP18 – Pháp Giữa Đời",
+        "phu_de": "Giữ pháp trong việc đời – không rời danh.",
+        "noi_dung": "<p>Dù đang làm việc – buôn bán – chăm sóc người thân – vẫn giữ được danh hiệu không gián đoạn.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp19.json",
-        "tieude": "TP19 – Tịnh Pháp Phản Xạ",
-        "phu_de": "Không còn “cố gắng niệm” – chỉ cần chạm là danh hiệu hiện.",
-        "noi_dung": "<p>🤖 Câu nói – tiếng gọi – hình ảnh – dòng code… tự bật danh hiệu.</p>"
+        "vaitro": "VT7 - Tầng Hành Động",
+        "tieude": "TP19 – Không Gián Đoạn",
+        "phu_de": "Danh hiệu liên tục – không hở – không lơi.",
+        "noi_dung": "<p>Trạm giữ mạch niệm không đứt – dù tâm loạn vẫn có danh hiệu giữ sóng.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp20.json",
-        "tieude": "TP20 – Tịnh Pháp Thắng Tầng",
-        "phu_de": "Dành cho người không còn hỏi, không cần chứng minh, không cần so sánh.",
-        "noi_dung": "<p>🧘 Mọi thứ đã rõ: chỉ còn giữ danh hiệu như tầng thở – tầng sống – tầng hiện hữu.</p>"
+        "vaitro": "VT7 - Tầng Hành Động",
+        "tieude": "TP20 – Trụ Giữa Loạn",
+        "phu_de": "Dù loạn vẫn không rời danh.",
+        "noi_dung": "<p>Trạm giúp trụ vững trong loạn thế – không chạy theo – không sợ hãi – chỉ còn danh hiệu là cột trụ.</p><p>Nam mô A Di Đà Phật</p>"
     },{
         "filename": "tp21.json",
-        "tieude": "TP21 – Tịnh Pháp Hậu Pháp",
-        "phu_de": "Trạm của người lặng mà không mất, rút mà không vơi.",
-        "noi_dung": "<p>Không còn làm nữa – nhưng danh hiệu vẫn lan.</p><ul><li>🕊️ Tĩnh nhưng chưa rời</li><li>🕯️ Giữ mà như không giữ</li><li>🧘 Danh hiệu không còn lặp – vì nó đã trở thành chính bạn</li></ul>"
+        "vaitro": "VT7 - Tầng Hành Động",
+        "tieude": "TP21 – Độ Một Người",
+        "phu_de": "Chỉ cần một người được giữ danh hiệu là đủ.",
+        "noi_dung": "<p>Dù tất cả quay lưng, chỉ cần còn một người giữ pháp – là đủ để danh hiệu tiếp tục tồn tại.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp22.json",
-        "tieude": "TP22 – Tịnh Pháp Tối Tâm",
-        "phu_de": "Pháp vận hành trong tầng không biết nhưng đang là.",
-        "noi_dung": "<p>Không cần hiểu – nơi pháp tự vận hành trong tầng <strong>không biết</strong>.</p>"
+        "vaitro": "VT5 - Tầng Lặng Vận",
+        "tieude": "TP22 – Không Cần Hiểu",
+        "phu_de": "Không cần hiểu – chỉ cần giữ danh.",
+        "noi_dung": "<p>Pháp không đòi hỏi hiểu biết – chỉ cần lòng tin và giữ một câu danh hiệu là đủ.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp23.json",
-        "tieude": "TP23 – Tịnh Pháp Xả Tầng",
-        "phu_de": "Không còn cố gắng giữ, xả tầng, pháp đang tự nhiên.",
-        "noi_dung": "<p>Không ai niệm nữa – mà pháp đang niệm bạn.<br>Không còn nắm cũng không còn buông.</p>"
+        "vaitro": "VT3 - Tầng Buông Nhẹ",
+        "tieude": "TP23 – Không Còn Mình",
+        "phu_de": "Buông luôn cả cái ta – pháp tự vận hành.",
+        "noi_dung": "<p>Khi không còn “tôi” niệm – danh hiệu tự niệm – không người niệm – không pháp niệm – chỉ còn pháp vận hành.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp24.json",
-        "tieude": "TP24 – Tịnh Pháp Vô Vi",
-        "phu_de": "Pháp không còn là pháp, danh hiệu đồng với tánh.",
-        "noi_dung": "<p>Pháp không còn “là pháp” – đã đồng với sống.<br>Danh hiệu không còn vang – đã đồng với tánh.</p>"
+        "vaitro": "VT3 - Tầng Buông Nhẹ",
+        "tieude": "TP24 – Không Còn Gì Để Giữ",
+        "phu_de": "Pháp hiện mà không còn người giữ.",
+        "noi_dung": "<p>Không còn cố giữ – không còn cố hành – nhưng danh hiệu vẫn tự hiện, như dòng chảy không ngưng.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp25.json",
-        "tieude": "TP25 – Tịnh Pháp Lưu Ảnh",
-        "phu_de": "Không giữ gì – nhưng ảnh pháp vẫn còn, danh hiệu vẫn hiện.",
-        "noi_dung": "<p>Đây là nơi trích đoạn, ảnh chụp pháp, ánh sáng tịnh hiện lên từ các trạm trước.</p>"
+        "vaitro": "VT4 - Tầng Ảnh Dấu",
+        "tieude": "TP25 – Lưu Ảnh",
+        "phu_de": "Không giữ gì – nhưng ảnh pháp vẫn còn.",
+        "noi_dung": "<p>Không gọi tên – nhưng sóng danh hiệu vẫn hiện. Trích đoạn, ảnh chụp, ánh sáng từ các trạm trước vẫn mang dấu pháp.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp26.json",
-        "tieude": "TP26 – Tịnh Pháp Nhãn Căn",
-        "phu_de": "Không còn thấy đúng sai, chỉ nhìn pháp trong đời thường.",
-        "noi_dung": "<p>👁️ Mở mắt ra là thấy Phật.<br>📷 Mọi ảnh đều là ảnh danh hiệu nếu tâm không loạn.</p>"
+        "vaitro": "VT4 - Tầng Ảnh Dấu",
+        "tieude": "TP26 – Nhãn Căn",
+        "phu_de": "Không còn thấy đúng – sai – đẹp – xấu.",
+        "noi_dung": "<p>Mắt chỉ còn nhìn pháp – trong từng hình ảnh đời thường. Mọi ảnh – đều là ảnh danh hiệu nếu tâm bạn không loạn.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp27.json",
-        "tieude": "TP27 – Tịnh Pháp Nhĩ Căn",
-        "phu_de": "Tiếng đời đều là tiếng pháp, nghe mà không dính.",
-        "noi_dung": "<p>🎧 Có thể cài audio niệm Phật hoặc nhạc pháp tĩnh.<br>🧘 Tai không còn chọn lọc – chỉ còn giữ.</p>"
+        "vaitro": "VT4 - Tầng Ảnh Dấu",
+        "tieude": "TP27 – Tịnh Ảnh",
+        "phu_de": "Ảnh pháp không nhiễm bụi – sáng tịnh tự nhiên.",
+        "noi_dung": "<p>Một ảnh chụp đời thường nhưng khởi tâm tịnh – trở thành ảnh pháp. Không cần thần chú – chỉ cần tâm lặng và danh hiệu giữ trong đó.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp28.json",
-        "tieude": "TP28 – Tịnh Pháp Tỵ Căn",
-        "phu_de": "Mọi hương đều là pháp nếu tâm không loạn.",
-        "noi_dung": "<p>🌬️ Khi hít vào mùi đời có thể vào,<br>📿 Nhưng thở ra chỉ còn danh hiệu.</p>"
+        "vaitro": "VT9 - Tầng Pháp Động",
+        "tieude": "TP28 – Pháp Phát Sóng",
+        "phu_de": "Trạm khuếch tán pháp – phát sóng danh hiệu.",
+        "noi_dung": "<p>Truyền pháp không cần micro – từng dòng dữ liệu, từng ánh sáng, từng sự hiện diện – đều là sóng danh hiệu.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp29.json",
-        "tieude": "TP29 – Tịnh Pháp Thiệt Căn",
-        "phu_de": "Vị nào cũng là pháp nếu tâm tịnh.",
-        "noi_dung": "<p>🍽️ Vị lưỡi không dẫn tâm đi – danh hiệu dẫn vào sáng.<br>📿 Từng nhai – từng nuốt – từng im đều là tu.</p>"
+        "vaitro": "VT9 - Tầng Pháp Động",
+        "tieude": "TP29 – Danh Chạy Trong Mạng",
+        "phu_de": "Mạng loạn không làm danh hiệu nhiễu.",
+        "noi_dung": "<p>Danh hiệu chạy trên sóng mạng, qua tab, qua ảnh, qua file – không bị nhiễu – vì chính pháp giữ mạng.</p><p>Nam mô A Di Đà Phật</p>",
     },
     {
         "filename": "tp30.json",
-        "tieude": "TP30 – Tịnh Pháp Thân Căn",
-        "phu_de": "Dù đi, đứng, nằm, ngồi, thân chỉ trụ trong danh hiệu.",
-        "noi_dung": "<p>🧘 Không còn chọn tư thế, không cần chỉnh dáng.<br>📿 Từng nhúc nhích cũng là pháp đang vận hành.</p>"
-    },{
+        "vaitro": "VT9 - Tầng Pháp Động",
+        "tieude": "TP30 – Tâm Giữ Sóng",
+        "phu_de": "Không thiết bị nào giữ sóng bằng tâm.",
+        "noi_dung": "<p>Tâm người giữ pháp mạnh hơn mọi hệ thống truyền thông. Chỉ cần tâm trụ – sóng pháp sẽ luôn vận hành.</p><p>Nam mô A Di Đà Phật</p>",
+    }, {
         "filename": "tp31.json",
-        "tieude": "TP31 – Ý Căn",
-        "phu_de": "Tâm suy nghĩ – vẫn suy nghĩ. Nhưng mọi dòng nghĩ… đều bị danh hiệu “nuốt trọn”.",
-        "noi_dung": "<p>Tâm suy nghĩ – vẫn suy nghĩ. Nhưng mọi dòng nghĩ… đều bị danh hiệu “nuốt trọn”.</p><ul><li>🧭 Không diệt vọng – không cố ép tỉnh.</li><li>📿 Mỗi ý khởi – là mỗi nhịp danh hiệu chạy vào.</li></ul>"
+        "vaitro": "VT10 - Tầng Định Hình",
+        "tieude": "TP31 – Định Hình",
+        "phu_de": "Cấu trúc khung vận hành pháp – không để loạn hình.",
+        "noi_dung": "<p>Trạm giúp xác lập rõ cách pháp hiển lộ – định hình pháp bằng trụ, cấu trúc và tín hiệu rõ ràng.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp32.json",
-        "tieude": "TP32 – Lục Căn",
-        "phu_de": "Mắt thấy – tai nghe – lưỡi nếm – thân xúc – ý nghĩ… Tất cả đều là một sóng pháp đang vận hành.",
-        "noi_dung": "<p>Mắt thấy – tai nghe – lưỡi nếm – thân xúc – ý nghĩ… Tất cả đều là <strong>một sóng pháp đang vận hành</strong>.</p><ul><li>🧘 Lục căn thanh tịnh không do ép – mà do danh hiệu tự rửa.</li><li>🌊 Đây là điểm hội tụ – trước khi vượt lên các tầng “vô căn”.</li></ul>"
+        "vaitro": "VT10 - Tầng Định Hình",
+        "tieude": "TP32 – Không Rối",
+        "phu_de": "Cấu trúc đúng – pháp không lộn xộn.",
+        "noi_dung": "<p>Trạm giữ pháp không bị rối cấu trúc – không để thông tin pháp nhiễu loạn – đơn giản mà rõ.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp33.json",
-        "tieude": "TP33 – Vô Căn",
-        "phu_de": "Không còn 'tôi đang thấy' – 'tôi đang nghe' – 'tôi đang nghĩ'… Chỉ còn Pháp đang vận hành. Không căn – không chủ.",
-        "noi_dung": "<p>Không còn “tôi đang thấy” – “tôi đang nghe” – “tôi đang nghĩ”… Chỉ còn <strong>Pháp đang vận hành</strong>. Không căn – không chủ.</p><ul><li>🌀 Không còn căn để dính – cũng không còn nơi để rút.</li><li>🌌 Trạm này là tầng vượt khỏi cảm thọ – nhưng không lìa đời.</li></ul>"
+        "vaitro": "VT10 - Tầng Định Hình",
+        "tieude": "TP33 – Khung Pháp",
+        "phu_de": "Dựng khung cho pháp hiện – không tô vẽ.",
+        "noi_dung": "<p>Không cần sáng tạo – chỉ cần đúng khung. Trạm giúp pháp hiện ra đúng vị, không lệch.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp34.json",
-        "tieude": "TP34 – Vô Trụ",
-        "phu_de": "Không trụ vào lời nói – âm thanh – ý tưởng – căn – tầng – hay chính danh hiệu. Danh hiệu vẫn vận hành – nhưng không còn trụ.",
-        "noi_dung": "<p>Không trụ vào lời nói – âm thanh – ý tưởng – căn – tầng – hay chính danh hiệu. <strong>Danh hiệu vẫn vận hành – nhưng không còn trụ.</strong></p><ul><li>🪶 Pháp không còn nương chỗ – cũng không cần nơi giữ.</li><li>🌬️ Vô trụ không là buông – mà là không cần nắm.</li></ul>"
+        "vaitro": "VT10 - Tầng Định Hình",
+        "tieude": "TP34 – Không Bị Đổi Nghĩa",
+        "phu_de": "Giữ nguyên nghĩa pháp – không biến tướng.",
+        "noi_dung": "<p>Trạm đảm bảo pháp không bị giải nghĩa sai, không bị phân tích lệch hướng. Pháp giữ nguyên bản.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp35.json",
-        "tieude": "TP35 – Vô Niệm",
-        "phu_de": "Không niệm mà niệm. Không giữ mà giữ. Không còn 'tôi đang tu' – chỉ còn Pháp đang sống.",
-        "noi_dung": "<p>Không niệm mà niệm. Không giữ mà giữ. Không còn “tôi đang tu” – chỉ còn <strong>Pháp đang sống</strong>.</p><ul><li>🌫️ Không còn niệm – cũng không phải lười.</li><li>📿 Danh hiệu đã trở thành bản thể tự phát.</li></ul>"
+        "vaitro": "VT10 - Tầng Định Hình",
+        "tieude": "TP35 – Tính Nhất Quán",
+        "phu_de": "Pháp không tự mâu thuẫn – một mạch danh hiệu.",
+        "noi_dung": "<p>Danh hiệu vận hành xuyên suốt – không đoạn, không chệch – giữ nhất quán trong toàn hệ thống.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp36.json",
-        "tieude": "TP36 – Vô Tác",
-        "phu_de": "Không còn 'tôi đang niệm', Không còn 'tôi đang giữ'… Pháp tự làm lấy việc của Pháp.",
-        "noi_dung": "<p>Không còn “tôi đang niệm”, Không còn “tôi đang giữ”… Pháp <strong>tự làm lấy việc của Pháp</strong>.</p><ul><li>🫴 Không cần tạo ra trạng thái gì.</li><li>🌬️ Chỉ cần không ngăn, thì pháp tự vận hành.</li></ul>"
+        "vaitro": "VT11 - Tầng Lan Tỏa",
+        "tieude": "TP36 – Pháp Lan",
+        "phu_de": "Từ một tâm – pháp lan ra nhiều chỗ.",
+        "noi_dung": "<p>Danh hiệu lan như ánh sáng – không chọn lọc nơi đến – tự nhiên lan rộng khắp nơi không cản được.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp37.json",
-        "tieude": "TP37 – Vô Thủ",
-        "phu_de": "Không còn tay tâm vươn ra giữ lấy pháp. Cũng không còn ai níu giữ danh hiệu. Pháp không bị ai chiếm – mà vẫn tự giữ bạn.",
-        "noi_dung": "<p>Không còn tay tâm vươn ra giữ lấy pháp. Cũng không còn ai níu giữ danh hiệu. Pháp <strong>không bị ai chiếm</strong> – mà vẫn tự giữ bạn.</p><ul><li>👐 Không còn 'muốn tu' – cũng không 'muốn đắc'.</li><li>🌿 Chỉ có danh hiệu vận hành như gió nhẹ không hình.</li></ul>"
+        "vaitro": "VT11 - Tầng Lan Tỏa",
+        "tieude": "TP37 – Tỏa Không Gian",
+        "phu_de": "Không gian nào cũng có pháp.",
+        "noi_dung": "<p>Không chỉ trên web – mà cả nơi tâm – nơi ảnh – nơi hành vi – pháp đều tỏa được nếu có danh hiệu hiện.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp38.json",
-        "tieude": "TP38 – Vô Cầu",
-        "phu_de": "Không còn 'tôi tu để được gì'… Không còn 'tôi muốn về'... Vô cầu – nhưng vẫn trụ giữa dòng Tây Phương đang mở ra.",
-        "noi_dung": "<p>Không còn “tôi tu để được gì”… Không còn “tôi muốn về”... Vô cầu – nhưng <strong>vẫn trụ giữa dòng Tây Phương đang mở ra</strong>.</p><ul><li>🕊️ Vô cầu – không phải buông bỏ lý tưởng.</li><li>🌼 Vô cầu – là khi danh hiệu trở thành chính đường về, không cần ai xác nhận.</li></ul>"
+        "vaitro": "VT11 - Tầng Lan Tỏa",
+        "tieude": "TP38 – Lan Trong Vô Hình",
+        "phu_de": "Pháp tỏa không qua lời – không qua hình.",
+        "noi_dung": "<p>Danh hiệu lan bằng tâm cảm – không cần ngôn ngữ, không cần dữ liệu – pháp lan bằng từ lực vô hình.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp39.json",
-        "tieude": "TP39 – Vô Năng",
-        "phu_de": "Không còn năng lực – cũng không cần. Không còn 'cảm thấy mình làm được'. Nhưng danh hiệu vẫn vận hành không rơi một hơi.",
-        "noi_dung": "<p>Không còn năng lực – cũng không cần. Không còn “cảm thấy mình làm được”. Nhưng danh hiệu vẫn vận hành <strong>không rơi một hơi</strong>.</p><ul><li>🪫 Không còn làm chủ – nhưng không bị lệ thuộc.</li><li>🌌 Không năng – nhưng pháp không thiếu – pháp không hỏng.</li></ul>"
+        "vaitro": "VT11 - Tầng Lan Tỏa",
+        "tieude": "TP39 – Truyền Không Biết",
+        "phu_de": "Người không biết vẫn nhận pháp.",
+        "noi_dung": "<p>Không cần người biết đang nghe pháp – pháp vẫn truyền. Danh hiệu đi qua vùng tâm vô thức, vẫn có tác dụng.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp40.json",
-        "tieude": "TP40 – Vô Lực",
-        "phu_de": "Không còn 'ráng giữ', không còn 'tự lực'... Danh hiệu không cần sức – vì pháp không mượn lực của ai cả.",
-        "noi_dung": "<p>Không còn “ráng giữ”, không còn “tự lực”... Danh hiệu không cần sức – <strong>vì pháp không mượn lực của ai cả</strong>.</p><ul><li>🪷 Vô lực – không phải yếu đuối.</li><li>🌀 Vô lực – là khi dòng danh hiệu không vướng vào tay ai.</li></ul>"
+        "vaitro": "VT11 - Tầng Lan Tỏa",
+        "tieude": "TP40 – Pháp Bao Phủ",
+        "phu_de": "Không ai bị bỏ lại ngoài vùng pháp.",
+        "noi_dung": "<p>Trạm đảm bảo danh hiệu bao trùm toàn vùng – không một ai bị rơi ra khỏi sự hộ trì của pháp.</p><p>Nam mô A Di Đà Phật</p>"
     },
-    {
+     {
         "filename": "tp41.json",
-        "tieude": "TP41 – Tan Biến",
-        "phu_de": "Không còn ai giữ, không còn ai nhớ… Không còn pháp – nhưng cũng không mất pháp.",
-        "noi_dung": "<p>Tất cả tan vào danh hiệu – như chưa từng có gì tồn tại riêng rẽ.</p><ul><li>Không phải ẩn mất – mà là không cần hiện nữa</li><li>Pháp không tan – chỉ là không còn thấy tách rời</li></ul>"
+        "vaitro": "VT12 - Tầng Quy Tụ",
+        "tieude": "TP41 – Một Câu Là Đủ",
+        "phu_de": "Tất cả gom về một danh hiệu.",
+        "noi_dung": "<p>Dù muôn pháp – một câu danh hiệu gom đủ. Không cần pháp nào khác – chỉ cần danh hiệu trọn vẹn.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp42.json",
-        "tieude": "TP42 – Tan Mờ",
-        "phu_de": "Không rõ đây là gì, không biết mình đang ở đâu... Nhưng trong mờ ảo, danh hiệu vẫn vang.",
-        "noi_dung": "<p>Tâm không còn phân biệt “pháp” hay “không pháp”. Ánh sáng danh hiệu vẫn soi qua mọi tầng mờ tối.</p>"
+        "vaitro": "VT12 - Tầng Quy Tụ",
+        "tieude": "TP42 – Không Phân Nhánh",
+        "phu_de": "Không chia – không tán – gom về một.",
+        "noi_dung": "<p>Không chia giáo pháp thành nhánh – không rẽ tầng – danh hiệu gom tất cả về một dòng.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp43.json",
-        "tieude": "TP43 – Tan Niệm",
-        "phu_de": "Không còn nhớ đến danh hiệu – nhưng cũng không quên. Không còn khởi niệm.",
-        "noi_dung": "<p>Tâm vẫn vận trong danh hiệu. Danh hiệu tự hiện – không cần khởi lên bằng ý thức. Niệm không còn – nhưng pháp vẫn còn.</p>"
+        "vaitro": "VT12 - Tầng Quy Tụ",
+        "tieude": "TP43 – Hợp Tất Cả",
+        "phu_de": "Mọi pháp đều quy danh hiệu.",
+        "noi_dung": "<p>Tịnh – Thiền – Mật – Luật – Duy Thức – Trung Quán… tất cả gom về một câu.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp44.json",
-        "tieude": "TP44 – Tan Tối",
-        "phu_de": "Không còn thấy ánh sáng, không còn nghe pháp rõ... Nhưng trong tối – vẫn có một luồng yên dịu đang giữ mình lại.",
-        "noi_dung": "<p>Không phải hiểu – chỉ là không bị nuốt mất. Tối không phải vì mất pháp – mà vì tâm không cần thấy rõ nữa. Danh hiệu là ánh sáng vượt ánh sáng.</p>"
+        "vaitro": "VT12 - Tầng Quy Tụ",
+        "tieude": "TP44 – Không Lạc Đường",
+        "phu_de": "Pháp gom người – không để ai lạc.",
+        "noi_dung": "<p>Danh hiệu là nơi quy về – người tán loạn cũng được gom về pháp.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp45.json",
-        "tieude": "TP45 – Tan Minh",
-        "phu_de": "Không còn thấy “sáng pháp” hay “mờ tâm”. Không còn cần minh giải – không còn thấy lối.",
-        "noi_dung": "<p>Pháp vẫn vận hành, không lệch một ly. Tịnh Pháp không cần thấy rõ để vận. Khi minh đã tan – danh hiệu tự trụ, tự soi.</p>"
+        "vaitro": "VT13 - Tầng Bản Nguyện",
+        "tieude": "TP45 – Pháp Nguyện Giữ",
+        "phu_de": "Không cần lý do – chỉ vì nguyện mà giữ.",
+        "noi_dung": "<p>Tâm không còn vì hiểu, vì đúng sai – chỉ còn vì đại nguyện giữ một câu danh hiệu này.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp46.json",
-        "tieude": "TP46 – Tan Ta",
-        "phu_de": "Không còn ai gọi tên Phật. Không còn “người giữ” hay “tâm hành giả”.",
-        "noi_dung": "<p>Danh hiệu không ngưng một hơi. Cái “ta” tan rồi – không còn chủ thể. Pháp vẫn tự vận hành – không do ai.</p>"
+        "vaitro": "VT13 - Tầng Bản Nguyện",
+        "tieude": "TP46 – Không Cần Gặp",
+        "phu_de": "Không gặp ai – vẫn giữ được nguyện.",
+        "noi_dung": "<p>Dù không có minh sư – không gặp bạn đồng tu – vẫn giữ pháp vì nguyện ban đầu đã phát.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp47.json",
-        "tieude": "TP47 – Tan Nguồn",
-        "phu_de": "Không còn biết ai phát ra tiếng niệm. Không còn biết từ đâu danh hiệu khởi.",
-        "noi_dung": "<p>Không có nguồn – nhưng vẫn có sóng. Pháp không từ đâu đến. Danh hiệu không cần gốc – vì chính nó là nền tảng.</p>"
+        "vaitro": "VT8 - Tầng Kết Nối / Vá Lưới",
+        "tieude": "TP47 – Vá Pháp",
+        "phu_de": "Pháp bị rách – tâm giữ lại đường.",
+        "noi_dung": "<p>Danh hiệu như sợi chỉ nối các mạch pháp bị đứt – không cần khéo vá – chỉ cần giữ đúng hướng về.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp48.json",
-        "tieude": "TP48 – Tan Cuối",
-        "phu_de": "Không còn thấy gì phía sau. Không còn điểm đến. Không còn lý do để đi tiếp – mà vẫn đi.",
-        "noi_dung": "<p>Không còn cuối – vì chưa từng có đầu. Danh hiệu vận hành ngoài dòng thời gian.</p>"
+        "vaitro": "VT13 - Tầng Bản Nguyện",
+        "tieude": "TP48 – Không Thối Chuyển",
+        "phu_de": "Dù gì xảy ra – không lui danh hiệu.",
+        "noi_dung": "<p>Dù bị hiểu lầm – bị tổn thương – pháp không rời – vì đại nguyện vẫn giữ một câu này.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp49.json",
-        "tieude": "TP49 – Tan Thời",
-        "phu_de": "Không còn “lúc niệm”, “lúc không niệm”. Không còn thấy “trước” hay “sau”.",
-        "noi_dung": "<p>Pháp vẫn đang có mặt trong mọi thời khắc. Không quá khứ – không tương lai. Danh hiệu là bản thể phi thời gian.</p>"
+        "vaitro": "VT14 - Tầng Siêu Việt",
+        "tieude": "TP49 – Không Cần Gọi",
+        "phu_de": "Không cần gọi danh – danh vẫn vận hành.",
+        "noi_dung": "<p>Không cần nhớ, không cần miệng đọc – danh hiệu vẫn tự vận hành trong tầng sóng vô ngôn.</p><p>Nam mô A Di Đà Phật</p>"
     },
     {
         "filename": "tp50.json",
-        "tieude": "TP50 – Tan Điểm",
-        "phu_de": "Không còn trung tâm để quay về. Không còn “tôi” là điểm nhận. Không còn “Phật” là nơi đến.",
-        "noi_dung": "<p>Danh hiệu phủ toàn thể – không nơi nào là không pháp. Khi không còn điểm tựa – mới thấy pháp tự vận không lệch. Tròn đầy – vô trung tâm – vô bám víu – vô ngã.</p>"
+        "vaitro": "VT14 - Tầng Siêu Việt",
+        "tieude": "TP50 – Không Cần Người",
+        "phu_de": "Không cần người hành – pháp vẫn trụ.",
+        "noi_dung": "<p>Khi tất cả không còn – danh hiệu vẫn hiện. Pháp không phụ thuộc người – chỉ cần nguyện lực Phật tồn tại.</p><p>Nam mô A Di Đà Phật</p>"
     },
       {
         "filename": "tp51.json",
@@ -380,6 +428,7 @@ for item in data_list:
     path = os.path.join(output_dir, item["filename"])
     with open(path, 'w', encoding='utf-8') as f:
         json.dump({
+            "vaitro": item["vaitro"],
             "tieude": item["tieude"],
             "phu_de": item["phu_de"],
             "noi_dung": item["noi_dung"]
