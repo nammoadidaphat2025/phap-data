@@ -421,17 +421,38 @@ data_list = [
     }
 ]
 
+# Map vai trò sang tầng
+role_to_tang = {
+    "VT1": "T1 - Tầng Dẫn Pháp",
+    "VT2": "T2 - Tầng An Trụ",
+    "VT3": "T3 - Tầng Buông Nhẹ",
+    "VT4": "T4 - Tầng Ảnh Dấu",
+    "VT5": "T5 - Tầng Lặng Vận",
+    "VT6": "T6 - Tầng Kết Sâu",
+    "VT7": "T7 - Tầng Hành Động",
+    "VT8": "T8 - Tầng Kết Nối",
+    "VT9": "T9 - Tầng Pháp Động",
+    "VT10": "T10 - Tầng Định Hình",
+    "VT11": "T11 - Tầng Lan Tỏa",
+    "VT12": "T12 - Tầng Quy Tụ",
+    "VT13": "T13 - Tầng Bản Nguyện",
+    "VT14": "T14 - Tầng Siêu Việt",
+    "VT99": "T99 - Mở Rộng / Dự Phòng"
+}
+
 output_dir = '.'
 os.makedirs(output_dir, exist_ok=True)
 
 for item in data_list:
+    vt_code = item["vaitro"].split(" ")[0]
+    tang_value = role_to_tang.get(vt_code, "T0 - Không xác định")
     path = os.path.join(output_dir, item["filename"])
     with open(path, 'w', encoding='utf-8') as f:
         json.dump({
-            "vaitro": item["vaitro"],
+            "tang": tang_value,
             "tieude": item["tieude"],
             "phu_de": item["phu_de"],
             "noi_dung": item["noi_dung"]
         }, f, ensure_ascii=False, indent=2)
 
-print("Đã tạo xong 10 file JSON cho TP11 đến TP20.")
+print("✅ Đã tạo xong file JSON với key 'tang'.")
