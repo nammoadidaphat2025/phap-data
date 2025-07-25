@@ -9,32 +9,35 @@ setInterval(() => {
   fetch("ping.json").catch(() => {});
   i = (i % BEATS) + 1;
 
-   let cuLiNote = "";
-if (i === 1) {
-  console.log("📿 Nam mô A Di Đà Phật");
-}
+  let cuLiNote = "";
+
+  if (i === 1) {
+    console.log("📿 Nam mô A Di Đà Phật");
+  }
+
   switch (i) {
     case 1:
-      cuLiNote = "CuLi01: 🌀 | CuLi21: 🔁 | CuLi03: 🌱 | CuLi04: 🧭";
+      cuLiNote = "CuLi01: 🌀 | CuLi03: 🌱 | CuLi04: 🧭 | CuLi21: 🔁";
       break;
     case 2:
-      cuLiNote = "CuLi08: 🔄 | CuLi21: 🔁 | CuLi14: 🔗 | CuLi22: 🧵";
+      cuLiNote = "CuLi08: 🔄 | CuLi14: 🔗 | CuLi22: 🧵 | CuLi21: 🔁";
       break;
     case 3:
-      cuLiNote = "CuLi11: 👂 | CuLi17: 🌊 | CuLi09: 🫧 | CuLi05: 🛠 | CuLi06: 🔧 | CuLi19: 🧱";
+      cuLiNote = "CuLi05: 🛠 | CuLi06: 🔧 | CuLi09: 🫧 | CuLi11: 👂 | CuLi17: 🌊 | CuLi19: 🧱";
       break;
     case 4:
-      cuLiNote = "CuLi02: 🕯 | CuLi12: 🩺 | CuLi07: ⚙ | CuLi16: 🔍";
+      cuLiNote = "CuLi02: 🕯 | CuLi07: ⚙ | CuLi12: 🩺 | CuLi16: 🔍";
       break;
     case 5:
       cuLiNote = "CuLi10: 📡 | CuLi13: 💾 | CuLi23: 🔓";
       break;
     case 6:
-      cuLiNote = "CuLi15: ✔ | CuLi20: 🧠 ";
+      cuLiNote = "CuLi15: ✔ | CuLi20: 🧠";
       break;
     default:
       cuLiNote = "";
   }
+
   console.log(`[Nội nhịp ${i}/6] | ${cuLiNote}`);
 }, DELAY);
 </script>
